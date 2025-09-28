@@ -1,8 +1,10 @@
 try:
+    # 获取用户输入的年份
     year = int(input("请输入年份："))
-    if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
-        print(f"{year}年是闰年")
+    # 判断是否为闰年
+    if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+        print("此年份是闰年")
     else:
-        print(f"{year}年不是闰年")
+        print("此年份不是闰年")
 except ValueError:
-    print("输入的不是有效年份，请输入数字")
+    print("输入无效，请输入一个有效的数字年份。")
